@@ -17,9 +17,14 @@ function average(nums) {
 
   return somma / nums.length;
 }
+function isPalindroma(p) {
+  const parolaInversa = p.trim().split("").reverse().join("");
+  return p.trim() === parolaInversa;
+}
 
 module.exports = {
   getInitials,
   createSlug,
   average,
+  isPalindroma,
 };
