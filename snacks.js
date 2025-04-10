@@ -3,23 +3,20 @@ function getInitials(nomeCompleto) {
   return `${nome.charAt(0).toUpperCase()}.${cognome.charAt(0).toUpperCase()}.`;
 }
 function createSlug(stringa) {
-  return stringa.toLowerCase();
+  return stringa.toLowerCase().replaceAll(" ", "-");
 }
 function average(nums) {
-   
-  
-    let somma = 0;
-  
-    nums.forEach((num) => {
-      if (isNaN(num)) {
-        throw new Error("L'array deve contenere solo numeri");
-      }
-      somma += num;
-    });
-  
-    return somma / nums.length;
-  }
-  
+  let somma = 0;
+
+  nums.forEach((num) => {
+    if (isNaN(num)) {
+      throw new Error("L'array deve contenere solo numeri");
+    }
+    somma += num;
+  });
+
+  return somma / nums.length;
+}
 
 module.exports = {
   getInitials,
