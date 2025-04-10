@@ -20,8 +20,13 @@ test(' la funzione "average calcola la media aritmetica di un array di numeri', 
 test('La funzione createSlug sostituisce gli spazi con "-".', () => {
   expect(createSlug("Nome BELLO e Lungo")).toBe("nome-bello-e-lungo");
 });
-//snack 5 
-test('La funzione isPalindroma verifica se una stringa è un palindromo', () =>{
-    expect(isPalindroma("anna")).toBeTruthy()
-    expect(isPalindroma("ciao")).toBeFalsy()
-})
+//snack 5
+test("La funzione isPalindroma verifica se una stringa è un palindromo", () => {
+  expect(isPalindroma("anna")).toBeTruthy();
+  expect(isPalindroma("ciao")).toBeFalsy();
+});
+// snack 6
+test("La funzione createSlug lancia un errore se il titolo è vuoto o non valido", () => {
+  expect(() => createSlug("")).toThrow("Titolo non valido");
+  expect(() => createSlug(null)).toThrow("Titolo non valido");
+});
